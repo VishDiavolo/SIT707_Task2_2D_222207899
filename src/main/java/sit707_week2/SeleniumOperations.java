@@ -46,11 +46,6 @@ public class SeleniumOperations {
 		// Load a webpage in chromium browser.
 		driver.get(url);
 
-		/*
-		 * How to identify a HTML input field - Step 1: Inspect the webpage, Step 2:
-		 * locate the input field, Step 3: Find out how to identify it, by id/name/...
-		 */
-
 		// Find first input field which is firstname
 		WebElement element = driver.findElement(By.id("firstname"));
 		System.out.println("Found element: " + element);
@@ -73,12 +68,12 @@ public class SeleniumOperations {
 		WebElement email = driver.findElement(By.id("email"));
 		System.out.println("Found element: " + email);
 		// Send Email name
-		email.sendKeys("svishuddhagmail.com");
+		email.sendKeys("svishuddha@gmail.com");
 
 		WebElement password = driver.findElement(By.id("password"));
 		System.out.println("Found element: " + password);
 		// Send Password name
-		password.sendKeys("Ww2#4444");
+		password.sendKeys("Ww2#444");
 
 		WebElement confirmPassword = driver.findElement(By.id("confirmPassword"));
 		System.out.println("Found element: " + confirmPassword);
