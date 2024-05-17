@@ -2,8 +2,6 @@ package sit707_week2;
 
 import java.io.IOException;
 
-import sit707_week2.SeleniumOperations;
-
 /**
  * Hello world!
  * 
@@ -11,7 +9,7 @@ import sit707_week2.SeleniumOperations;
  */
 public class Main {
 	public static void main(String[] args) throws IOException {
-		int choice = 2;
+		int choice = 1;
 
 		switch (choice) {
 		case 1:

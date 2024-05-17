@@ -10,6 +10,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
  * This class demonstrates Selenium locator APIs to identify HTML elements.
@@ -31,19 +32,23 @@ public class SeleniumOperations {
 	}
 
 	public static void officeworks_registration_page(String url) throws IOException {
-		// Step 1: Locate chrome driver folder in the local drive.
-		System.setProperty("webdriver.chrome.driver",
-				"C:/Users/svish/Downloads/Software/chromedriver-win32/chromedriver-win32/chromedriver.exe");
 
-		// Step 2: Use above chrome driver to open up a chromium browser.
-		System.out.println("Fire up chrome browser.");
-		WebDriver driver = new ChromeDriver();
+		// Locate gecko driver
+		System.setProperty("webdriver.gecko.driver",
+				"D:/Deakin/Uni/2024 Tri 1/SIT707 - Software Quality And Testing/geckodriver.exe");
+
+		// open up a firefox browser.
+		System.out.println("Fire up firefox browser.");
+		WebDriver driver = new FirefoxDriver();
+
+		// Maximize the browser window
+		driver.manage().window().maximize();
 
 		System.out.println("Driver info: " + driver);
 
 		sleep(2);
 
-		// Load a webpage in chromium browser.
+		// Load a webpage in firefox browser.
 		driver.get(url);
 
 		// Find first input field which is firstname
@@ -94,7 +99,7 @@ public class SeleniumOperations {
 		 */
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(scrFile, new File(
-				"D:\\Deakin\\Uni\\2024 Tri 1\\SIT707 - Software Quality And Testing\\OnTrack\\2.1P - Pass Task - Selenium test case\\2.1P-resources\\office_works_login.png"));
+				"D:\\Deakin\\Uni\\2024 Tri 1\\SIT707 - Software Quality And Testing\\OnTrack\\2.2D - Distinction Task\\office_works_login.png"));
 		// Sleep a while
 		sleep(2);
 
